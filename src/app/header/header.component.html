@@ -1,0 +1,10 @@
+<div class="container">
+  <nav class="nav">
+    <span routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      <a [routerLink]="['/']" class="nav-item">Current Weather</a>
+    </span>
+    <span routerLinkActive="active">
+      <a [routerLink]="['forecast']" class="nav-item">Forecast for 5 days</a>
+    </span>
+  </nav>
+</div>

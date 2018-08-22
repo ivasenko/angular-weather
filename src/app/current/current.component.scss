@@ -1,0 +1,20 @@
+@import '../styles/common';
+@import '../styles/form';
+
+
+.container, form{
+  text-align: center;
+}
+.forecast-ten-days-btn {
+  background: $main-color;
+  color: $font-color;
+}
+.currentWeatherForm{
+  @extend .form;
+}
+.currentWeatherForm-input{
+  @extend  .form-input;
+}
+.currentWeatherForm-btn{
+  @extend .form-btn;
+}

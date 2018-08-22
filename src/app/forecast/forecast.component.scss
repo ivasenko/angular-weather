@@ -1,0 +1,22 @@
+@import '../styles/common';
+@import '../styles/form';
+
+.container{
+  display: flex;
+  justify-content: space-around;
+}
+.forecastForm{
+  @extend .form;
+}
+.forecastForm-input{
+  @extend .form-input;
+}
+.forecastForm-btn{
+  @extend .form-btn;
+}
+.day{
+  padding: 10px 50px;
+  border: 2px solid lightgray;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+}

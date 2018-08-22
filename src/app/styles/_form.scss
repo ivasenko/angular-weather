@@ -1,0 +1,19 @@
+.form{
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-input{
+  padding: 20px 20px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.form-btn{
+  background: #007788;
+  border: 2px solid #007788;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 20px 40px;
+}

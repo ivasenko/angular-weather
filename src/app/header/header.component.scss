@@ -1,0 +1,24 @@
+@import '../styles/common';
+@import '../styles/form';
+
+.nav{
+  background: $main-color;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+  background-color: #00a0b7;
+}
+span:first-child{
+  margin-right: 50px;
+}
+span{
+  border-radius: 5px;
+}
+a{
+  display: inline-block;
+  padding: 20px;
+  color: $font-color;
+}

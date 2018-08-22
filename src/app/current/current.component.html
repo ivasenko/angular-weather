@@ -1,0 +1,46 @@
+<!-- <button (click)="goToCurrentlocation()">BUTTON</button>
+<div class="container">
+  <h1>{{myWeather.cityName}}</h1>
+  <h2>{{+myWeather.dtime | date:'shortTime' }}&deg;</h2>
+  <h2>{{myWeather.temp}}&deg;</h2>
+  <div class="img">
+    <img src="http://openweathermap.org/img/w/{{myWeather.icon}}.png" alt="sunny">
+  </div>
+  <h3>{{myWeather.weatherKind | uppercase}}</h3>
+  <h4>Max: {{myWeather.tempMax}}&deg;</h4>
+  <h4>Min: {{myWeather.tempMin}}&deg;</h4>
+<h4>Sunrise: {{myWeather.sunrise | date:'shortTime'}}</h4>
+</div>
+<form class="currentWeatherForm" (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <input
+    class="currentWeatherForm-input"
+    type="text" ngModel name="city"
+    placeholder="Name of a city">
+  <button class="currentWeatherForm-btn" name="button">Go</button>
+</form>
+<div>
+  <a class="forecast-ten-days-btn" (click)="goToTenDaysWeather()">Forecast for 10 days</a>
+</div>
+
+
+ -->
+
+<form [formGroup]="hourForecastForm" (ngSubmit)="onSubmit()" class="forecastForm">
+    <input class="forecastForm-input"
+           type="text"
+           formControlName="cityHour"
+           placeholder="Name of your city">
+    <button class="forecastForm-btn">Go</button>
+  </form>
+<div class="container">
+    <div class="day" *ngFor="let hour of hourCityForecast.list">
+      <!-- <div class="icon">
+        <img src="http://openweathermap.org/img/w/{{day.icon}}.png" alt="icon">
+      </div> -->
+      <h3>cityName: {{ hour.cityName }}&deg;</h3>
+      <h3>Hours: {{ hour.list.dt }}&deg;</h3>
+      <div class="temp">
+        <h3>Min: {{ hour.temp }}&deg;</h3>
+      </div>
+    </div>
+  </div>
